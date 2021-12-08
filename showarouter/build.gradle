@@ -1,5 +1,5 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'kotlin-android'
     id 'kotlin-kapt'
 }
@@ -14,13 +14,13 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.multimoduledome"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
 
         //使用ARouter
 //        javaCompileOptions {
@@ -56,19 +56,10 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    //    如果LoginComponent不是独立作为Module运行，而是作为Library，则可以引用
-    if (!isLoginRunALone.toBoolean()) {
-        implementation project(':logincomponent')
-    }
-    //    如果SignComponent不是独立作为Module运行，而是作为Library，则可以引用
-    if (!isSignRunALone.toBoolean()) {
-        implementation project(':signcomponent')
-    }
     implementation project(':common')
-    implementation project(':showarouter')
 
     //使用ARouter
     implementation "com.alibaba:arouter-api:$arouter_version"
-//    annotationProcessor "com.alibaba:arouter-compiler:$arouter_version"
+//    annotationProcessor 'com.alibaba:arouter-compiler:x.x.x'
     kapt "com.alibaba:arouter-compiler:$arouter_version"
 }

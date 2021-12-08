@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/common" />
             <option value="$PROJECT_DIR$/logincomponent" />
+            <option value="$PROJECT_DIR$/showarouter" />
             <option value="$PROJECT_DIR$/signcomponent" />
           </set>
         </option>

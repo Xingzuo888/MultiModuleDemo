@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center_horizontal">
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
@@ -16,19 +16,31 @@
         android:id="@+id/btnSign"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="签到"/>
+        android:text="签到" />
 
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="登录"/>
+        android:text="登录" />
 
     <Button
         android:id="@+id/btnShowUserInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="显示LoginComponent中的UserInfoFragment"/>
+        android:text="显示LoginComponent中的UserInfoFragment" />
+
+    <Button
+        android:id="@+id/btnShowActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="通过ARouter进行activity页面跳转" />
+
+    <Button
+        android:id="@+id/btnShowARouter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="通过ARouter进行module页面跳转" />
 
     <LinearLayout
         android:id="@+id/llFragmentContainer"

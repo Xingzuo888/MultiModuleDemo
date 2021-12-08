@@ -2,6 +2,7 @@ package com.multimoduledome
 
 import android.app.Application
 import android.util.Log
+import com.alibaba.android.arouter.launcher.ARouter
 import com.common.AppConfig
 import com.common.IComponentApplication
 
@@ -19,6 +20,8 @@ class MainApplication : Application(), IComponentApplication {
     override fun onCreate() {
         super.onCreate()
         initialize(this)
+        ARouter.openDebug()
+        ARouter.init(this)
     }
 
     override fun initialize(application: Application) {
